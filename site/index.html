@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>The Tooth Fairy Office</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
+<head>
+
+  <title>The Tooth Fairy Office</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body {font-family: "Lato", sans-serif}
+  .mySlides {display: none}
+
+  .rnd_button {
+    background-color: #78e0e0;
+    border: none;
+    color: black;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  </style>
+  
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176750672-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176750672-1');
+</script>
+
+
+<script>
+
+function submit_complaint() {
+  alert ("HI")
+}
+
+</script>
+
+</head>
 <body>
 
 <!-- Navbar -->
@@ -18,17 +58,17 @@ body {font-family: "Lato", sans-serif}
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#complaints" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPLAINTS</a>
-    <a href="#thefairies" class="w3-bar-item w3-button w3-padding-large w3-hide-small">THE FAIRIES</a>
+    <a href="#thefairies" class="w3-bar-item w3-button w3-padding-large w3-hide-small">THE OFFICE</a>
     <a href="#donations" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DONATIONS</a>
     
-    <a href="javascript:void(0)" class="w3-padding-small w3-hover-red w3-hide-small w3-right"><img src="/images/tooth-icon.png" height=40/></a>
+    <a href="javascript:void(0)" class="w3-padding-small w3-hide-small w3-right"><img src="/images/tooth-icon.png" height=40/></a>
   </div>
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#complaints" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">COMPLAINTS</a>
-  <a href="#thefairies" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">THE FAIRIES</a>
+  <a href="#thefairies" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">THE OFFICE</a>
   <a href="#donations" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DONATIONS</a>
 </div>
 
@@ -38,7 +78,7 @@ body {font-family: "Lato", sans-serif}
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
     <img src="/images/tfo_banner_caucasian.png" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">   
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
@@ -51,6 +91,7 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">    
     </div>
   </div>
+ 
 
     <!-- The Complaints Section -->
     <div class="w3-black" id="complaints">
@@ -62,128 +103,114 @@ body {font-family: "Lato", sans-serif}
   
         <table>
           <tr>
-            <td><img src="/images/tooth-icon.png" height=40/></td><td width="30%">Name (Optional):</td><td width="70%"><input type="text" id="txt_name" style='width:20em'/></td>
+            <td><img src="/images/tooth-icon.png" height=40/></td><td width="30%">Name (Optional):</td><td width="70%"><input type="text" id="txt_name" style='width:24em'/></td>
           </tr>
           <tr>
-            <td><img src="/images/tooth-icon.png" height=40/></td><td width="30%">Email (Optional):</td><td width="70%"><input type="text" id="txt_email" style='width:20em'/></td>
+            <td><img src="/images/tooth-icon.png" height=40/></td><td width="30%">Email (Optional):</td><td width="70%"><input type="text" id="txt_email" style='width:24em'/></td>
           </tr>
           <tr>
             <td><img src="/images/tooth-icon.png" height=40/></td><td>Compaint:</td><td>
-              <select style='width:20em'>
-                <option>Missed tooth pickup</option>
-                <option>Broke item during delivery</option>
-                <option>Delivered to wrong person</option>
-                <option>Too noisy during delivery</option>
-                <option>Other</option>
+              <select style='width:24em'>
+                <option>Fairy missed a tooth pickup</option>
+                <option>Fairy forgot to leave item(s)</option>
+                <option>Fairy broke something during delivery</option>
+                <option>Fairy left glitter on my bed</option>
+                <option>Fairy delivered to wrong person</option>
+                <option>Fary was too noisy during delivery</option>
+                <option>Other (leave details in comments)</option>
+                
               </select>
             </td>
           </tr>
-          <tr><td><img src="/images/tooth-icon.png" height=40/></td><td>Comments:</td><td><textarea rows=5 style='width:20em'></textarea></td></tr>
-          
+          <tr><td><img src="/images/tooth-icon.png" height=40/></td><td>Comments:</td><td><textarea rows=5 style='width:24em'></textarea></td></tr>
+          <tr><td colspan=3 style="text-align: center; padding-top:10px;"><button class="rnd_button" onclick="submit_complaint()"><b>Submit Complaint</b></button></td></tr>
         </table>
-  
+        <br/>
+        <br/>
+        <table style="width:100%" style="border-width: 0px;">
+          <tr>
+            <td style="width:33%; text-align: center; padding: 5px;"><img src="/images/qa_seal.png" alt="Quality" style="width: 100%; max-width: 150px;" /></td>
+            <td style="width:33%; text-align: center; padding: 5px;"><img src="/images/conv_seal.png" alt="Quality" style="width: 100%; max-width: 150px;" /></td>
+            <td style="width:33%; text-align: center; padding: 5px;"><img src="/images/rel_seal.png" alt="Quality" style="width: 100%; max-width: 150px;" /></td>
+          </tr>
+
+        </table>
         
   
-        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-          <div class="w3-third w3-margin-bottom">
-            <img src="/images/qa_seal.png" alt="Quality" style="width:100%" class="w3-hover-opacity">
-          </div>
-          <div class="w3-third w3-margin-bottom">
-            <img src="/images/qa_seal.png" alt="Convenience" style="width:100%" class="w3-hover-opacity">
-            
-          </div>
-          <div class="w3-third w3-margin-bottom">
-            <img src="/images/qa_seal.png" alt="Speed" style="width:100%" class="w3-hover-opacity">
-            
-          </div>
-        </div>
+ 
       </div>
     </div>
   
 
   <!-- The Fairies Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="thefairies">
-    <h2 class="w3-wide">THE FAIRIES</h2>
-    <p class="w3-opacity"><i>Title</i></p>
-    <p class="w3-justify">We have created a fictional website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h2 class="w3-wide">THE OFFICE</h2>
+    <p class="w3-opacity"><i>Meet the Tooth Fairies</i></p>
+    <p class="w3-justify">
+      Welcome to the Office of the Tooth Fairy!  More accurately it should be called the Office of the Tooth Fair<u>ies</u> as there are currently over 3000 different Tooth Fairy Agents 
+      currently employed by the office.  The mission statement of the Tooth Fairy Office (or TFO as we like to call it) is to help children all over the world transition to adulthood 
+      by making the growing-up process more fun.  As children grow they inevitably lose their "baby teeth" - we Agents of the Tooth Fairy Office collect these teeth and leave a small 
+      gift in exchange.  We like to think this helps children look forward to losing teeth - and ultimately helps with the scary process of growing up.
+    </p>
+    <p class="w3-justify">
+      In case you were wondering, Tooth Fairy Agents come in all shapes, sizes and colors.  We are a very diverse, high-performance workforce.  There are currently 3 different levels 
+      of Agent within the TFO:</p>
+    <p class="w3-justify"><b>Associate Tooth Fairy Agent</b> - including new members to our team that are just starting out in their exciting Tooth Fairy career journey.</p>
+    <p class="w3-justify"><b>Tooth Fairy Agent</b>  - designation for a Tooth Fairy Agent once they have passed their probationary period.</p>
+    <p class="w3-justify"><b>Tooth Fairy Supervisory Agent</b> - highly experienced Tooth Fairy Agents who oversee other Tooth Fairy Agents and Junior Agents.  Typically a 
+      Tooth Fairy Supervisory Agent oversees a geographic region, making sure that deliveries are successful and responsible for mentoring more junior Agents.</p>
+    
+    <p class="w3-justify">And finally there is the <b>Head Tooth Fairy</b> who is responsible for running the Tooth Fairy Office as well as being responsible for cross-department information exchange with 
+    other organizations like the Santa Claus Office and the Easter Bunny Office.  This Fairy is elected every 5 years based on voting from all currently active Tooth Fairy Supervisory Agents.</p>
+    
+    <p class="w3-justify">As an additional note, as we are bringing new Tooth Fairies onboard, sometimes they do make mistakes.  Sometimes they forget to make a tooth pick-up, or leave a gift.  Or sometimes they accidentally turn the 
+      family pet into a shoe or something weird like that.  Young fairies are a bit unpredictable.  If you experience any issues with your Tooth Fairy delivery please make sure to let us know 
+      via the <a href="#complaints">complaints form</a> above!  Your feedback is highly appreciated.
+    </p>
+
+    <p class="w3-justify">Finally, two more things we would like to share with you about the current Tooth Fairy Office:</p>  
+    <p class="w3-justify">First, No - we don't keep all the teeth we collect, that would be super creepy.  We make 
+      sure to dispose of them in a environmentally friendly way and do recycle alot of the enamel into a wide-range of fairy products including chairs, tables, structural support beams and 
+      many house-hold items like spoons & bowls.
+    </p>
+    <p class="w3-justify">
+      Second, any attempt <a href="https://www.amazon.com/Catch-Tooth-Fairy-Adam-Wallace/dp/1492637335">to capture a Tooth Fairy Agent</a> or impede an Agents work in anyway is considered a "naughty act" and will immediately be reported to all other Offices including 
+      The Office of Santa Claus.
+    </p>
+
+
     <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <img src="/images/fairy_1.png" class="w3-round w3-margin-bottom" alt="Fairy" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <img src="/images/fairy_2.png" class="w3-round w3-margin-bottom" alt="Fairy" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <img src="/images/fairy_3.png" class="w3-round" alt="Fairy" style="width:60%">
-      </div>
+      <table style="width:100%">
+        <tr>
+          <td style="width:33%"><img src="/images/fairy_1.png" class="w3-round w3-margin-bottom" alt="Fairy" style="width:100%; max-width: 100px;"></td>
+          <td style="width:33%"><img src="/images/fairy_2.png" class="w3-round w3-margin-bottom" alt="Fairy" style="width:100%; max-width: 100px;"></td>
+          <td style="width:33%"><img src="/images/fairy_3.png" class="w3-round w3-margin-bottom" alt="Fairy" style="width:100%; max-width: 100px;"></td>
+        </tr>
+
+      </table>
+    
     </div>
   </div>
-
-
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+    <!-- The Donation Section -->
+    <div class="w3-black" id="donations">
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h2 class="w3-wide w3-center">DONATIONS</h2>
+        
+        <p class="w3-justify">Interested in donating your tooth fairy money to a good cause?  If interested check out 
+          <a href="https://www.globaldentalrelief.org/">Global Dental Relief</a>, 100% Tooth Fairy approved.</p>
+          <br/>
+          <div style="width:100%; text-align:center;"><a href="https://www.globaldentalrelief.org/donate/"><img src="/images/gdr_logo.png" style="width:100%"/></a></div>
+          <br/><br/><br/>
       </div>
     </div>
-  </div>
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
-    </div>
-  </div>
   
 <!-- End Page Content -->
 </div>
 
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium"><a href="/privacy.html" >Privacy Statement</a></p>
 </footer>
 
 <script>
