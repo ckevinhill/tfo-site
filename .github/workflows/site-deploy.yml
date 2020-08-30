@@ -31,7 +31,3 @@ jobs:
       - name: Copy files
         run:
           az storage blob upload-batch -d '$web' --account-name ${{ env.AZURE_STORAGE_ACCOUNT }} --account-key ${{ secrets.AZURE_STORAGE_KEY }} -s "./site" --pattern *.*
-        
-      - name: Azure service principal logout
-        run: |
-          az logout

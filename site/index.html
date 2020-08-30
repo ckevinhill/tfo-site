@@ -103,11 +103,11 @@ function submit_complaint() {
   
         <table>
           <tr>
-            <td><img src="/images/tooth-icon.png" height=40/></td><td width="30%">Name (Optional):</td><td width="70%"><input type="text" id="txt_name" style='width:24em'/></td>
+            <td><img src="/images/tooth-icon.png" height=40/></td><td width="30%">Name (Optional):</td><td width="70%"><input type="text" id="txt_name" style='width:100%; max-width:24em'/></td>
           </tr>
           <tr>
             <td><img src="/images/tooth-icon.png" height=40/></td><td>Compaint:</td><td>
-              <select style='width:24em'>
+              <select style='width:100%; max-width:24em'>
                 <option>Fairy missed a tooth pickup</option>
                 <option>Fairy forgot to leave item(s)</option>
                 <option>Fairy broke something during delivery</option>
@@ -119,7 +119,7 @@ function submit_complaint() {
               </select>
             </td>
           </tr>
-          <tr><td><img src="/images/tooth-icon.png" height=40/></td><td>Comments:</td><td><textarea rows=5 style='width:24em'></textarea></td></tr>
+          <tr><td><img src="/images/tooth-icon.png" height=40/></td><td>Comments:</td><td><textarea rows=5 style='width:100%; max-width:24em'></textarea></td></tr>
           <tr><td colspan=3 style="text-align: center; padding-top:10px;"><button class="rnd_button" onclick="submit_complaint()"><b>Submit Complaint</b></button></td></tr>
         </table>
         <br/>
