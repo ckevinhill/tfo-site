@@ -1,0 +1,48 @@
+# Workflow to depoy new static site to blob on push
+
+name: Deploy tfo site
+
+defaults:
+  run:
+    shell: bash  
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+
+env:
+  SITE_BASEURL: http://www.toothfairyoffice.com
+  AZURE_STORAGE_ACCOUNT: tfocom
+  # AZURE_STORAGE_KEY: <Stored as Repository Secret>
+  
+jobs:
+  build-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout latest codebase from repository
+      - name: Checkout blog repository code
+        uses: actions/checkout@v2
+    
+    # Deploy /site folder to Azure blob
+      - name: Deploy build to static site (Azure blob)
+        run: hugo deploy --maxDeletes -1
+        env:
+          AZURE_STORAGE_ACCOUNT: ${{ env.AZURE_STORAGE_ACCOUNT }}
+          AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
+
+    # Copy /site folder to Azure blob
+      - name: Azure service principal login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_STORAGE_KEY }}
+
+      - name: Copy files
+        run:
+          az storage blob upload-batch -d "$web" --account-name ${{ env.AZURE_STORAGE_ACCOUNT }} --account-key ${{ secrets.AZURE_STORAGE_KEY }} -s "/site" --pattern *.*
+        
+      - name: Azure service principal logout
+        run: |
+          az logout
