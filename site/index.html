@@ -44,6 +44,12 @@
 <script>
 
 function submit_complaint() {
+
+  if ( document.getElementById("txt_comment").value == "" ) {
+    alert ("please provide a complaint comment");
+    return;
+  }
+
   window.location = "complaint.html"
 }
 
@@ -119,7 +125,7 @@ function submit_complaint() {
               </select>
             </td>
           </tr>
-          <tr><td><img src="/images/tooth-icon.png" height=40/></td><td>Comments:</td><td><textarea rows=5 style='width:100%; max-width:24em'></textarea><br/><br/><br/></td></tr>
+          <tr><td><img src="/images/tooth-icon.png" height=40/></td><td>Comments:</td><td><textarea rows=5 style='width:100%; max-width:24em' id="txt_comment"></textarea><br/><br/><br/></td></tr>
           <tr><td colspan=3 style="text-align: center; padding-top:10px;"><button class="rnd_button" onclick="submit_complaint()"><b>Submit Complaint</b></button></td></tr>
         </table>
         <br/>
